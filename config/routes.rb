@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
-
-
-  get root to: 'users#top'
-  get 'users/show'
-  get 'users/updare'
   devise_for :users
+  root to: 'tasks#index'
+  resources :users, only: [:top, :show, :update]
+  resources :tasks, only: [:new, :create, :show, :destroy]
+
 end

@@ -1,0 +1,6 @@
+<h1><%=@task.task_name%></h1>
+
+<p><%= simple_format @task.content%></p>
+<p><%=  @task.created_at%></p>
+
+<%= link_to "削除", task_path(@task.id), method: :delete%>
