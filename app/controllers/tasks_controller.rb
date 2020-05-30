@@ -10,7 +10,7 @@ class TasksController < ApplicationController
 
   def create
     Task.create(task_params)
-    redirect_to root_path
+    redirect_to user_path(current_user.id)
 
   end
 
@@ -21,7 +21,7 @@ class TasksController < ApplicationController
   def destroy
     @task = Task.find(params[:id])
     @task.destroy
-    redirect_to root_path
+    redirect_to user_path(current_user.id)
   end
 
   def task_params
