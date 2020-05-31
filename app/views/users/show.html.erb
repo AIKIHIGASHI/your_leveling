@@ -3,13 +3,14 @@
 
 <div class="profile">
   <div class="content">
+    <div>
+    <%= image_tag "/#{current_user.image}", size: '50x50',class: "image" %>
+    </div>
     <div class ="user">
-      <p>user</p>
-      <h2><%=current_user.name%></h2>
+      <h3><%=current_user.name%></h3>
     </div>
     <div>
-      <br>
-      <h2>Lv.<%=current_user.level%></h2>
+      <h3>Lv.<%=current_user.level%></h3>
     </div>
   </div>  
 </div>

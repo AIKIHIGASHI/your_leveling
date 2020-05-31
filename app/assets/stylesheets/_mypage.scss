@@ -4,14 +4,17 @@
   padding: 50px 80px;
   margin: 30px 100px;
   box-shadow: 2px 2px 5px 1px  gray;
-  .user {
-    padding-right: 120px;
-  }
+
 
   .content {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+  .image {
+    border-radius: 50px;
+  }
+  .user {
 
+  }
   }
 }
 

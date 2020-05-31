@@ -23,7 +23,7 @@
   </div>
   <div>
     <p>完了したらボタンを押そう！</p>
-    <%=link_to "完了！", "#", class: "btn btn-primary" %>
+    <%=button_to "完了！", action="#{task_path(@task.id)}",method: "put", class: "btn btn-primary" %>
   </div>
 
 

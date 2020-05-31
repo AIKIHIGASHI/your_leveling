@@ -18,6 +18,21 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id])
   end
 
+  def update
+    @user = User.find(current_user.id)
+    @task = Task.find(params[:id])
+    @task.update(task_exp: @task.task_exp + 100)
+    @level = @task.task_level
+    if @task.task_exp % 500 == 0
+      @task.update(task_level: @task.task_level + 1)
+      if @level < @task.task_level
+        @user.update(level: @user.level + 1)
+      end
+    end
+
+    redirect_to user_path(current_user.id)
+  end
+
   def destroy
     @task = Task.find(params[:id])
     @task.destroy

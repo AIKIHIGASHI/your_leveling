@@ -1,8 +1,10 @@
 class AddColumnToUser < ActiveRecord::Migration[5.2]
   def change
-    add_column :users, :name,  :string
-    add_column :users, :image, :string
-    add_column :users, :level, :integer
-    add_column :users, :exp,   :integer
-  end
+    create_table :users do |t|
+      t.string  :name
+      t.string  :image, default: "64096.png"
+      t.integer :level, default: 0
+      t.integer :exp, default: 0
+      t.timestamps
+    end
 end
