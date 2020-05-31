@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <title>YourLeveling</title>
     <%= csrf_meta_tags %>
@@ -9,15 +10,23 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <% if user_signed_in? %>
-    <%= link_to "Your Leveling", root_path%>
-    <%= link_to "新しい習慣！", new_task_path %>
-    <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header__right--btn" %>
-    <%= link_to "#{current_user.name} : Lv.#{current_user.level}", user_path(current_user.id) %>
-  <%else%>
-    <%= link_to "ログイン", new_user_session_path, class: "header__right--btn" %>
-    <%= link_to "新規登録", new_user_registration_path, class: "header__right--btn" %>
-  <%end%>
+  <header>
+    <div class="header">
+      <% if user_signed_in? %>
+        <div class="logo"> 
+          <%= link_to "Your Leveling", root_path%>
+        </div>
+        <div class="menu">
+          <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header__right--btn" %>
+          <%= link_to "#{current_user.name} : Lv.#{current_user.level}", user_path(current_user.id) %>
+        </div>
+      <%else%>
+        <%= link_to "ログイン", new_user_session_path, class: "header__right--btn" %>
+        <%= link_to "新規登録", new_user_registration_path, class: "header__right--btn" %>
+      <%end%>
+    </div>
+  </header>
+
   <body>
     <%= yield %>
   </body>

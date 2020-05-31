@@ -1,0 +1,23 @@
+
+.show {
+  
+  h1 {
+    border-bottom: 2px solid gray;
+    
+  }
+  .content{
+  margin: 0 80px 40px;
+  padding: 0 30px 20px ;
+  background-color: rgb(241, 241, 241);
+  box-shadow: 2px 2px 5px 1px  gray;
+  position: relative;
+    a {
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+      color: grey;
+      text-decoration: underline;
+
+    }
+  }
+}

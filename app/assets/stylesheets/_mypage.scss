@@ -1,0 +1,45 @@
+.profile {
+  background-color: rgb(241, 241, 241);
+  border: 1px solid rgb(212, 212, 212);
+  padding: 50px 80px;
+  margin: 30px 100px;
+  box-shadow: 2px 2px 5px 1px  gray;
+  .user {
+    padding-right: 120px;
+  }
+
+  .content {
+  display: flex;
+  justify-content: center;
+
+  }
+}
+
+.btn-box {
+  position: relative;
+  padding-bottom: 20px;
+  a{
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+.table-box {
+  
+  padding: 30px 30px;
+  background-color: rgb(241, 241, 241);
+  box-shadow: 2px 2px 5px 1px  gray;
+  .table thead th  {
+    border-color: black;
+  }
+  td {
+    border-color: black;
+    padding: 0;
+  }
+  a {
+    display: block;
+    padding: 20px;
+    color: black;
+  }
+}

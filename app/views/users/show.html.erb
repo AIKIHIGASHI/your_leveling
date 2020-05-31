@@ -1,10 +1,48 @@
-<h1>マイページ！！！！！！！</h1>
+<br>
+<h1>My page</h1>
+
+<div class="profile">
+  <div class="content">
+    <div class ="user">
+      <p>user</p>
+      <h2><%=current_user.name%></h2>
+    </div>
+    <div>
+      <br>
+      <h2>Lv.<%=current_user.level%></h2>
+    </div>
+  </div>  
+</div>
+
+<br>
+<h2>〜〜習慣一覧〜〜</h2>
+<br>
+<div class="btn-box">
+  <%= link_to "☆新規登録☆", new_task_path, class: "btn btn-primary"%>
+</div>
+<br>
+<div class="table-box">
+  <table class="table table-hover">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>level</th>
+          </tr>
+      </thead>
+      <tbody>
+        <% @tasks.each do |task|%>
+          <tr>
+              <td><%= link_to task.task_name, task_path(task.id)%></td>
+              <td><%= link_to task.task_level%></td>
+          </tr>
+        <% end %>
+      </tbody>
+  </table>
+</div>
+<br><br><br><br>
 
 
-<h2>〜〜<%=current_user.name%>の習慣一覧〜〜</h2>
 
-<% @tasks.each do |task|%>
 
-<%= link_to task.task_name, task_path(task.id)%>
 
-<% end %>
+
