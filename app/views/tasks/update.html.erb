@@ -1,0 +1,21 @@
+
+<% if @task.task_exp >= 100 %>
+<div>
+おめでとう！<%=@task.task_name%>レベルが<%=@task.task_level + 1%>になりました！
+<%= link_to "マイページへ", task_path(@task.id),method: :put %> 
+<div>
+<% else %>
+<%= link_to "マイページへ", user_path(current_user.id) %> 
+<% end %>
+<div class="bar">
+<div id="aaa" class="gage" style="width: <%=@task.task_exp - 25 %>%"></div>
+</div>
+
+  
+
+<script>
+    $(".gage").animate({
+      "width": "<%=@task.task_exp%>%"
+    }, 2000);
+</script>
+

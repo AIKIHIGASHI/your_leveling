@@ -19,18 +19,25 @@ class TasksController < ApplicationController
   end
 
   def update
-    @user = User.find(current_user.id)
-    @task = Task.find(params[:id])
-    @task.update(task_exp: @task.task_exp + 100)
-    @level = @task.task_level
-    if @task.task_exp % 500 == 0
-      @task.update(task_level: @task.task_level + 1)
-      if @level < @task.task_level
-        @user.update(level: @user.level + 1)
+    
+    @user = User.find(current_user.id)                #usersテーブルからログイン中ユーザーのIDを取得
+
+    @task = Task.find(params[:id])                    #tasksテーブルから現在のタスクのIDを取得
+    @task.update(task_exp: @task.task_exp + 25)       #tasksテーブルのtask_expカラムに加算する
+    @level = @task.task_level                         #tasksテーブルから今のtask_levelを取得して@levelに代入
+    if @task.task_exp >= 101                          #【分岐】もしtask_expが100以上になった場合
+      @task.update(task_level: @task.task_level + 1)  #task_levelを加算する
+      
+      if @level < @task.task_level                    #【分岐】もし@levelより加算後のtask_levelが大きい場合
+        @user.update(level: @user.level + 1)          #@user.levelを加算する
+        @task.update(task_exp: @task.task_exp = 0)      #task_expを0にする
+        redirect_to user_path(current_user.id)
       end
     end
+  end
 
-    redirect_to user_path(current_user.id)
+  def levelup
+
   end
 
   def destroy

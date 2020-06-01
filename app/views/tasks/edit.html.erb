@@ -1,2 +1,33 @@
-<h1>Tasks#edit</h1>
-<p>Find me in app/views/tasks/edit.html.erb</p>
+  <% if @task.task_exp >= 100 %>
+    <div class = "window">
+    <%=@task.task_exp%>
+    <%=@task.task_level%>
+    <%=@task.task_name%>
+      <h2>レベルが上がりました</h2>
+      <div class="bar">
+        <div class="gage" style="width: <%=@task.task_exp - 25 %>%"></div>
+      </div>
+      <%=button_to "完了！", action="#{task_path(@task.id)}",method: "put", class: "btn btn-primary" %>
+        <script>
+          $(".gage").animate({
+          "width": "<%=@task.task_exp%>%"
+          }, 3000);
+        </script>
+    </div>
+  <%else%>
+    <div class = "window">
+    <%=@task.task_exp%>
+    <%=@task.task_level%>
+    <%=@task.task_name%>
+      <h2>経験値が上がりました</h2>
+      <div class="bar">
+        <div class="gage" style="width: <%=@task.task_exp - 25 %>%"></div>
+      </div>
+      <%= link_to "戻る", user_path(current_user.id)%>
+        <script>
+          $(".gage").animate({
+          "width": "<%=@task.task_exp%>%"
+          }, 4000);
+        </script>
+    </div>
+  <%end %>

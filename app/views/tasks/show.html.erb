@@ -1,7 +1,13 @@
-
 <div class="show">
+
+
+
   <br><br>
+  <%=@task.task_exp%>
+    <%=@task.task_level%>
+    <%=@task.task_name%>
   <h1><%=@task.task_name%></h1>  
+
   <br><br>
   <div class="content">
     <table class="table">
@@ -22,12 +28,14 @@
     <%= link_to "削除", task_path(@task.id),method: :delete%>
   </div>
   <div>
-    <p>完了したらボタンを押そう！</p>
-    <%=button_to "完了！", action="#{task_path(@task.id)}",method: "put", class: "btn btn-primary" %>
+    <p>達成したらボタンを押そう！</p>
+    <%=button_to "達成！", action="#{task_path(@task.id)}",method: "put", class: "btn btn-primary" %>
   </div>
 
 
 </div>
+
+
   <% if user_signed_in? && current_user.id == @task.user.id %>
   
   <% end %>
