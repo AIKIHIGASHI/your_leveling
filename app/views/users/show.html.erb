@@ -1,8 +1,5 @@
+<div class ="mypage">
 <br>
-<h1>My page</h1>
-
-
-
 <div class="profile">
   <div class="content">
     <div>
@@ -18,7 +15,7 @@
 </div>
 
 <br>
-<h2>〜〜習慣一覧〜〜</h2>
+<h2>習慣一覧</h2>
 <br>
 <div class="btn-box">
   <%= link_to "☆新規登録☆", new_task_path, class: "btn btn-primary"%>
@@ -36,14 +33,19 @@
         <% @tasks.each do |task|%>
           <tr>
               <td><%= link_to task.task_name, task_path(task.id)%></td>
-              <td><%= link_to task.task_level%></td>
+              <td>
+              <%= link_to task.task_level, task_path(task.id)%>
+                <div id="bar" class="bar">
+                <div id="gage" class="gage" style="width: <%=task.task_exp %>%"></div>
+                </div>
+              </td>
           </tr>
         <% end %>
       </tbody>
   </table>
 </div>
 <br><br><br><br>
-
+</div>
 
 
 

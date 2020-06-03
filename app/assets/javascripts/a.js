@@ -32,6 +32,13 @@ $(function() {
   
   });
   
+  $(".message").fadeIn(2000);
+  $(".im").fadeIn(2000);
+  $(".profile").fadeIn(1000);
+  $(".table-box").slideDown(1000);
+  $(".content").slideDown(1000);
+  $(".new").fadeIn(1000);
+
 
 
   // $(function(){

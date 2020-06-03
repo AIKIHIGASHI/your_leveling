@@ -3,13 +3,11 @@
 
 
   <br><br>
-  <%=@task.task_exp%>
-    <%=@task.task_level%>
-    <%=@task.task_name%>
+
   <h1><%=@task.task_name%></h1>  
 
   <br><br>
-  <div class="content">
+  <div id="content" class="content">
     <table class="table">
       <thead>
         <tr>
@@ -25,7 +23,9 @@
         </tr>
       </tbody>
     </table>
-    <%= link_to "削除", task_path(@task.id),method: :delete%>
+  <% if user_signed_in? && current_user.id == @task.user.id %>
+  <%= link_to "削除", task_path(@task.id),method: :delete%>
+  <% end %>
   </div>
   <div>
     <p>達成したらボタンを押そう！</p>
@@ -36,7 +36,5 @@
 </div>
 
 
-  <% if user_signed_in? && current_user.id == @task.user.id %>
-  
-  <% end %>
+
   

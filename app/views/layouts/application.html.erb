@@ -16,14 +16,11 @@
         <div class="logo"> 
           <%= link_to "Your Leveling", root_path%>
         </div>
-  
         <div class="menu">
           <div class="name menu-content">
             <%= link_to "#{current_user.name} : Lv.#{current_user.level}", user_path(current_user.id) %>   <span class="bar-button">+</span>
           </div>
-
         </div>
-        
       <%else%>
         <%= link_to "ログイン", new_user_session_path, class: "header__right--btn" %>
         <%= link_to "新規登録", new_user_registration_path, class: "header__right--btn" %>
@@ -35,13 +32,12 @@
         <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header__right--btn" %>
       </div>
   </div>
-          
-  <body>
     <% if flash[:notice]%>
-      <div class="flash">
+      <div id="flash">
         <%= flash[:notice] %>
       </div>
     <% end %>
+  <body>
     <%= yield %>
   </body>
 </html>

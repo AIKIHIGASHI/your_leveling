@@ -31,6 +31,7 @@ class TasksController < ApplicationController
       if @level < @task.task_level                    #【分岐】もし@levelより加算後のtask_levelが大きい場合
         @user.update(level: @user.level + 1)          #@user.levelを加算する
         @task.update(task_exp: @task.task_exp = 0)      #task_expを0にする
+        flash[:notice] = "おめでとうございます！あなたのLevelが#{@user.level}になりました"
         redirect_to user_path(current_user.id)
       end
     end

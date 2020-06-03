@@ -1,48 +1,59 @@
-.profile {
-  background-color: rgb(241, 241, 241);
-  border: 1px solid rgb(212, 212, 212);
-  padding: 50px 80px;
-  margin: 30px 100px;
-  box-shadow: 2px 2px 5px 1px  gray;
-
-
-  .content {
-  display: flex;
-  justify-content: space-evenly;
-  .image {
-    border-radius: 50px;
-  }
-  .user {
-
-  }
-  }
-}
-
-.btn-box {
-  position: relative;
-  padding-bottom: 20px;
-  a{
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
-}
-
-.table-box {
+.mypage{
+  .profile {
+    display: none;
+    background-color: rgb(241, 241, 241);
+    border: 1px solid rgb(212, 212, 212);
+    padding: 50px 80px;
+    margin: 10px 100px 30px;
+    box-shadow: 2px 2px 5px 1px  gray;
   
-  padding: 30px 30px;
-  background-color: rgb(241, 241, 241);
-  box-shadow: 2px 2px 5px 1px  gray;
-  .table thead th  {
-    border-color: black;
+    
+  
+    .content {
+    display: flex;
+    justify-content: space-evenly;
+    .image {
+      border-radius: 50px;
+    }
+  
+    }
   }
-  td {
-    border-color: black;
-    padding: 0;
+
+  h2 {
+    border-bottom: 2px solid gray;
+    margin: 0 100px;
   }
-  a {
-    display: block;
-    padding: 20px;
-    color: black;
+  
+  .btn-box {
+    position: relative;
+    padding-bottom: 20px;
+    a{
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
   }
+  
+  .table-box {
+    display: none;
+    padding: 30px 30px;
+    background-color: rgb(241, 241, 241);
+    box-shadow: 2px 2px 5px 1px  gray;
+    .table thead th  {
+      border-color: black;
+  
+    }
+    td {
+      border-color: black;
+      padding: 5px 0;
+      vertical-align: middle;
+    }
+    a {
+      display: block;
+      padding: 10px 20px;
+      color: black;
+    }
+  }
+  
 }
+

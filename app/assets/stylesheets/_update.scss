@@ -1,0 +1,52 @@
+
+
+.update {
+
+  .message {
+    padding-top: 80px;
+    display: none;
+
+    h2 {
+      padding-top: 20px;
+    }
+
+  }
+
+  .bar {
+    margin: 40px auto;
+
+  }
+
+
+  .btn{
+    position: fixed;
+    z-index: 11;
+    left: 45%
+  }
+
+  .im {
+    display: none;
+  }
+
+  .image{
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+  }
+
+  .img{
+    position: fixed;
+    z-index: 10;
+    right: 0;
+    bottom: 0;
+  }
+
+
+
+}
+
+
+
