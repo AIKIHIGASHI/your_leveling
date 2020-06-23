@@ -1,2 +1,53 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<div class ="mypage">
+<br>
+<div class="profile">
+  <div class="content">
+    <div>
+    <%= image_tag "/#{current_user.image}", size: '50x50',class: "image" %>
+    </div>
+    <div class ="user">
+      <h3><%=current_user.name%></h3>
+    </div>
+    <div>
+      <h3>Lv.<%=current_user.level%></h3>
+    </div>
+  </div>  
+</div>
+
+<br>
+<h2>習慣一覧</h2>
+<br>
+<div class="btn-box">
+  <%= link_to "☆新規登録☆", new_task_path, class: "btn btn-primary"%>
+</div>
+<br>
+<div class="table-box">
+  <table class="table table-hover">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Level</th>
+          </tr>
+      </thead>
+      <tbody>
+        <% @tasks.each do |task|%>
+          <tr>
+              <td><%= link_to task.task_name, task_path(task.id)%></td>
+              <td>
+              <%= link_to task.task_level, task_path(task.id)%>
+                <div id="bar" class="bar">
+                <div id="gage" class="gage" style="width: <%=task.task_exp %>%"></div>
+                </div>
+              </td>
+          </tr>
+        <% end %>
+      </tbody>
+  </table>
+</div>
+<br><br><br><br>
+</div>
+
+
+
+
+

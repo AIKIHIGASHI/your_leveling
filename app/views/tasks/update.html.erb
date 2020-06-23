@@ -1,0 +1,33 @@
+<div class = "update">
+
+  <% if @task.task_exp >= 100 %>
+    <div class ="message">
+      <h2>おめでとうございます！</h2>
+      <h2>【<%=@task.task_name%>】がLv.<%=@task.task_level + 1%>になりました！</h2>
+    </div>
+  <% else %>
+    <div class ="message">
+      <h2>お疲れ様です！</h2>
+      <h2>経験値を獲得しました！</h2>
+    </div>
+  <% end %>
+  
+  <div class="bar">
+      <div id="aaa" class="gage" style="width: <%=@task.task_exp - 25 %>%"></div>
+    </div>
+  <% if @task.task_exp >= 100 %>
+    <div><%= link_to "マイページへ", task_path(@task.id),method: :put, class: "btn btn-primary" %></div>
+  <% else %>
+    <%= link_to "マイページへ", user_path(current_user.id), class: "btn btn-primary" %>
+  <% end %>
+  <script>
+      $(".gage").animate({
+        "width": "<%=@task.task_exp%>%"
+      }, 2000);
+  </script>
+<% if @task.task_exp >= 100 %>
+<%= image_tag "/sozai_image_46146.png" ,class: "im image", size: '50x50' %>
+<% else %>
+<%= image_tag "/sozai_image_46144.png" ,class: "im img", size: '300x300' %>
+<% end %>
+</div>

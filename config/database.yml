@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: your_leveling_production
-  username: your_leveling
-  password: <%= ENV['YOUR_LEVELING_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5

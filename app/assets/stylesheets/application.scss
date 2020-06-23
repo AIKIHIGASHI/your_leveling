@@ -1,0 +1,112 @@
+@import "reset";
+@import "bootstrap";
+@import "mypage";
+@import "show";
+@import "new";
+@import "top";
+@import "update";
+@import "signup";
+@import "login";
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+html {
+  max-width: 1000px;
+  min-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0 20px;
+  background-color: rgba(0, 47, 255, 0.795);
+  .header {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .bar-button {
+      color: rgb(241, 241, 241);
+      padding-left: 5px;
+      font-size: 20px;
+    }
+
+    a{
+      color: rgb(241, 241, 241);
+      text-align: 60px;
+    }
+  }
+}
+
+.side-bar {
+  background-color: rgba(0, 47, 255, 0.795);
+  width: 150px;
+  height: 100vw;
+  position: fixed;
+  z-index: 9;
+  right: 0;
+  display: none;
+  a {
+    color: rgb(241, 241, 241);
+    border-bottom: 1px solid rgb(241, 241, 241);
+
+    margin-right: 20px;
+    display: inline;
+  }
+}
+body {
+  
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  margin: 60px auto 100px;
+  padding: 0 100px;
+  
+}
+
+
+.bar {
+  width: 600px;
+  height: 20px;
+  border-radius: 20px;
+  background-color: rgb(170, 170, 170);
+  .gage {
+
+    height: 20px;
+    
+    color: #fff;
+    background-color: #00BCD4;
+    border-radius: 20px;
+  }
+}
+
+#bar {
+  width: 100px;
+  height: 10px;
+  border-radius: 20px;
+  background-color: rgb(170, 170, 170);
+  margin: 0 auto;
+  margin-bottom: 10px;
+  #gage {
+    height: 10px;
+    color: #fff;
+    background-color: #00BCD4;
+    border-radius: 20px;
+  }
+}
+
+.btn-primary{
+  border-radius: 20px;
+}
+
+#flash{
+  font-size: 16px;
+  color: red;
+}

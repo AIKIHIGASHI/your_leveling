@@ -1,0 +1,18 @@
+<div class="new">
+  <br><br><br>
+  <h1>新しい習慣を登録しよう！！！</h1>
+  <br><br><br>
+  <%= form_with model: @task, class: :from, local: true do |form|%>
+    <div>
+      <%= form.text_field :task_name, placeholder: "【例】ランニング"%>
+    </div>
+    <br><br>
+    <div>
+      <%= form.text_area :content, placeholder: "【例】外で30分走る"%>
+    </div>
+    <br><br><br>
+    <div>
+      <%= form.submit "☆登録☆", class: "btn btn-primary" %>
+    </div>
+  <%end%>
+</div>

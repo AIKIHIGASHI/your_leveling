@@ -1,0 +1,17 @@
+.new {
+  display: none;
+  h1 {
+    border-bottom: 2px solid gray;
+  }
+  #task_task_name {
+  width: 75%;
+  height: 40px;
+  border-radius:10px;
+
+  }
+  textarea {
+    width: 75%;
+    height: 80px;
+    border-radius:10px;
+  }
+}
