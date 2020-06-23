@@ -1,25 +1,35 @@
 class TasksController < ApplicationController
   def index
-    @tasks = Task.includes(:user)
-    
+    @tasks = Task.includes(:user)    
   end
 
   def new
+    unless user_signed_in?
+      redirect_to root_path
+    end
     @task = Task.new
   end
 
   def create
+    unless user_signed_in?
+      redirect_to root_path
+    end
     Task.create(task_params)
     redirect_to user_path(current_user.id)
 
   end
 
   def show
+    unless user_signed_in?
+      redirect_to root_path
+    end
     @task = Task.find(params[:id])
   end
 
   def update
-    
+    unless user_signed_in?
+      redirect_to root_path
+    end
     @user = User.find(current_user.id)                #usersテーブルからログイン中ユーザーのIDを取得
 
     @task = Task.find(params[:id])                    #tasksテーブルから現在のタスクのIDを取得
