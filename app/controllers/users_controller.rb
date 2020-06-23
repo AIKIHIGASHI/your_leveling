@@ -11,7 +11,7 @@ class UsersController < ApplicationController
       redirect_to root_path
     end
     @user = User.find(params[:id])
-    @tasks = @user.tasks
+    @tasks = @user.tasks.order(:id) 
   end
 
   def update
