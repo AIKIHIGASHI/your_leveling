@@ -7,4 +7,5 @@ class AddColumnToUser < ActiveRecord::Migration[5.2]
       t.integer :exp, default: 0
       t.timestamps
     end
+  end
 end
