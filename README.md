@@ -1,8 +1,24 @@
 # README
 
-#　Your Leveling
-
+# Your Leveling
 ![demo](https://gyazo.com/b3a605f396456c24764a97e6767f694c/raw)
+# 概要
+#### URL
+https://yourleveling.herokuapp.com/
+
+# 機能一覧
+#### ユーザー管理
+・ユーザー登録・ログイン、ログアウト機能
+#
+#
+#
+#
+#
+#
+#
+#
+#
+
 ![demo](https://gyazo.com/78da687fa4e2de8e2c4af6c840133499/raw)
 ![demo](https://gyazo.com/f388171eeb93695d09feb2e67e0e4d65/raw)
 ![demo](https://gyazo.com/9c5d724679887801b337875e9cde8f31/raw)
