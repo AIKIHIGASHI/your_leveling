@@ -1,27 +1,7 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#　Your Leveling
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
 ![demo](https://gyazo.com/b3a605f396456c24764a97e6767f694c/raw)
 ![demo](https://gyazo.com/78da687fa4e2de8e2c4af6c840133499/raw)
 ![demo](https://gyazo.com/f388171eeb93695d09feb2e67e0e4d65/raw)
