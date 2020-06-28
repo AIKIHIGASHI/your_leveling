@@ -7,7 +7,7 @@
 https://yourleveling.herokuapp.com/
 ### ログイン用Email
 user@gmail.com
-### ログイン用Passwd
+### ログイン用password
 111111
 
 # 機能一覧
